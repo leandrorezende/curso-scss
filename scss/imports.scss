@@ -1,0 +1,16 @@
+// import - importa um arquivo scss, uma url etc
+
+//@import "foo.css";
+//@import "foo" min-width: 400px;
+//@import "https://foo.com/bar";
+//@import url("http://fonts.googleapis.com/css?family=Droid+Sans");
+
+// esse conceito é utilizado para dividir os códigos scss em mais de um arquivo
+// e evitar que código css seja colocado em um único arquivo
+// aplicado ao conceito de uso do partials
+//os seguintes imports estariam no arquivo style.css
+//e todos os arquivos _file.scss estariam dentro da pasta partials/
+//_base.scss     @import partials/base.scss
+//_buttons.scss  @import partials/buttons.scss
+//_figures.scss  @import partials/figures.scss
+//_reset.scss    @import partials/_reset.scss

@@ -1,0 +1,17 @@
+// funcoes
+// rgb(100, 102, 123) é uma função que recebe tres valores
+// e retorna um valor em hexadecimal
+// outras funções nativas
+// to-upper-case("string qualquer");
+// round(real-round-value)
+
+
+// sempre ter o @return para retornar os valores
+@function calc-fluid($target, $container){
+  $retorno: ($target / $container) * 100%;
+  @return $retorno;
+}
+
+div {
+  width: calc-fluid(400px, 1000px);
+}

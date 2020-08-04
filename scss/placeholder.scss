@@ -1,0 +1,32 @@
+// placeholder - semelhantes as class, tem o objectivo
+//de reaproveitar um bloco de estilo
+// utilizado para aproveitar blocos estáticos de codigo
+// enquanto que o mixing são para blocos que necessitam receber parâmetros
+
+@mixin center {
+  display: block;
+  margin: 0 auto;
+}
+
+// duplicacação utilizando mixing
+div {
+  @include center;
+}
+
+p {
+  @include center;
+}
+
+// agrupamento utilizando placeholder
+div {
+  @extend %center;
+}
+
+p {
+  @extend %center;
+}
+
+%center {
+  display: block;
+  margin: 0 auto;
+}

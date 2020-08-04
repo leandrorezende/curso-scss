@@ -1,0 +1,61 @@
+$width: 100%;
+$font-size: 1.2rem;
+$background: #962acd;
+$color: #fff;
+$border-style: solid 1px solid;
+nav {
+  background: $background;
+  color: $color;
+  width: $width;
+  font-size: $font-size;
+}
+
+//tipos numericos podem ser reais ou inteiros, e eles podem
+//ter unidade ou não
+$width-rem: 3.5rem;
+$width-px: 300px;
+$width: 300;
+
+aside {
+  width: $width-rem;
+}
+
+//variaveis tipos string, pode ser com aspas, apostofros, ou sem nada
+$font: 'Lucida Grande';
+$weight: bold;
+
+section {
+  font-family: $font;
+  font-weight: $weight;
+}
+
+//cores rgb, rgba, hexa, nome da cor
+$bg: red;
+$bg-section: rgba(0, 0, 0, 7);
+$font-color: #ffffff;
+
+section {
+  background: $bg-section;
+}
+
+//variaveis boolean e null, não são utilizadas diretamente  no css,
+//são utilizadas dentro de funções
+$color-light: false;
+$color-dark: true;
+$color-dark: null;
+
+//variaveis lista, não são utilizadas diretamente no css
+$animals: puma, sea-slug, egret;
+$animals: "puma", "sea-slug";
+$margin: 10px 20px 12px 4px;
+
+section {
+  margin: $margin;
+}
+
+//variaveis tipo maps
+$social: (
+        facebook: #3b5998,
+        flickr: #3b5998,
+        github: #4183c4,
+)

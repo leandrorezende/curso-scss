@@ -1,0 +1,29 @@
+// directivas de controle
+
+// through para valores menores ou iguais
+@for $i from 1 through 3 {
+  .item-#{$i} {
+    width: 2em * $i;
+  }
+}
+
+// to para valores menores
+@for $i from 1 to 3 {
+  .item-#{$i} {
+    width: 2em * $i;
+  }
+}
+
+// each sempre trabalha com listas
+$animals: puma, sea-slug, egret, salamander;
+@each $animal in $animals {
+  .#{$animal}-icon {
+    background-image: url('/imagens/#{$animal}.png');
+  }
+}
+
+$i: 6;
+@while $i > 0 {
+  .item-#{$i} {width: 2em * $i;}
+  $i: $i - 2;
+}

@@ -1,0 +1,18 @@
+.btn {
+  padding: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+}
+@function calc-fluid($size-px){
+  $size-rem: ($size-px/16px)#{rem};
+  @return $size-rem;
+}
+
+.btn-follow {
+  @extend .btn;
+  color: blue;
+  border-radius: 2px;
+  font-size: calc-fluid(32px);
+}
+

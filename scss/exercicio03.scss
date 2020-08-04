@@ -1,0 +1,11 @@
+.btn {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+}
+
+btn-follow {
+  @extend .btn;
+  color: blue;
+  border-radius: 2px;
+}

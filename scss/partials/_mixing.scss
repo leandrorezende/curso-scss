@@ -1,0 +1,38 @@
+// mixins
+// mixins permitem definir estilos que poder
+//ser reutilizados em toda a folha de estilo
+
+// default value to blue
+@mixin titulo($size, $color: blue) {
+  color: $color;
+  font-size: $size;
+}
+
+// varargs params
+@mixin pad ($values...) {
+  padding: $values;
+}
+
+@mixin nome-mixin($parameter){
+  -webkit-border-radius: $parameter;
+     -moz-border-radius: $parameter;
+      -ms-border-radius: $parameter;
+          border-radius: $parameter;
+}
+
+.box {
+  @include nome-mixin(10px);
+  @include titulo(14px);
+}
+
+// explicitar a variável referenciada e não
+// necessitar assim passar elas em order
+h1 {
+  @include titulo($color: green, $size: 14px);
+}
+
+p {
+  @include pad(10px 20px 40px);
+}
+
+

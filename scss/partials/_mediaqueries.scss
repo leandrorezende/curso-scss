@@ -1,0 +1,53 @@
+// media queries - utilizada para possibilitar responsividade
+
+.sidebar {
+  width: 30%;
+  // quando a media for tela e a orientacao for paisagem
+  @media screen and (orientation: landscape) {
+    width: 40%;
+  }
+}
+
+// em css, medias são utilizadas para atribuir execessões a uma regra,
+// afim de promover responsividade
+
+.sidebar {
+  width: 30%;
+}
+
+// excessão aplicada a classe sidebar quando atigir um regra
+@media screen and (orientation: landscape) {
+  .sidebar {
+    width: 40%;
+  }
+}
+
+// exemplo real utilização mixins + media + interpolation + content
+
+$table-width: 768px;
+$desktop-width: 1024px;
+
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content; // permite passar conteudos para o mixing
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$table-width}) {
+    @content; // permite passar conteudos para o mixing
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content; // permite passar conteudos para o mixing
+  }
+}
+
+header {
+  padding: 3em;
+  @include tablet { // tablet foi o tipo do mixing
+    padding: 2em; // vai ser colocado no lugar do @content, como parâmetro do @mixing
+  }
+}

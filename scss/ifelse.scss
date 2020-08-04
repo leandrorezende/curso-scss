@@ -1,0 +1,16 @@
+// directivas de controle
+
+$template: light;
+
+header {
+  @if $template == dark {
+    color: #fff;
+    background: #222;
+  } @else if $template == light {
+    color: #333;
+    background: #fff;
+  } @else {
+    color: #555;
+    background: #f0f0f0;
+  }
+}

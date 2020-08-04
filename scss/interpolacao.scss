@@ -1,0 +1,15 @@
+//interpolação - utilizar variavies dentro de propriedades ou regras
+//css
+
+$name: destaque;
+$attr: border;
+
+p.#{$name} {
+  #{$attr}-color: blue;
+}
+
+p {
+  $font-size: 12px;
+  $line-height: 30px;
+  font: #{$font-size}/#{$line-height};
+}
